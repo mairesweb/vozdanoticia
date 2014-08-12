@@ -1,0 +1,29 @@
+* {
+	font-size: 100%;
+}
+body {
+    font-family: Helverica, Arial, sans-serif;
+    font-size: 100%;
+}
+.clear {
+    clear: both;
+}
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 50%;
+}
+.img-rounded {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+}
+.img-center {
+    margin: 0 auto;
+}
+
+#resultado {
+    max-height: 80px;
+}
