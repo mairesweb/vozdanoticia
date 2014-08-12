@@ -17,9 +17,9 @@
 <body>    
     <div data-role="page" data-theme="a" id="index">
         <div data-role="header">
-            <a href="#painelI" title="Menu" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="#painelI" title="Menu" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-left">Menu</a>
             <h1>Administrador</h1>
-            <a href="login.php" data-ajax="false" title="Sair" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-right ui-btn-icon-notext"></a>
+            <a href="login.php" data-ajax="false" title="Sair" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-right">Sair</a>
             <div data-role="navbar">
                 <ul>
                     <li><a href="#index" class="ui-btn-active">Início</a></li>
@@ -92,7 +92,12 @@
                 });
 				
 				$("#altoContraste").on('click', function(){
-					
+					$('#painelI').page({theme:'a'});
+					$('#index').page({theme:'b'});
+					$('#painelN').page({theme:'a'});
+					$('#noticias').page({theme:'b'});
+					$('#painelU').page({theme:'a'});
+					$('#usuarios').page({theme:'b'});
 				});
             </script>
         </div><!-- /content -->
@@ -104,9 +109,9 @@
 
     <div data-role="page" data-theme="a" id="noticias">
         <div data-role="header">
-            <a href="#painelN" title="Menu" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="#painelN" title="Menu" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-left">Menu</a>
             <h1>Notícias</h1>
-            <a href="login.php" title="Sair" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-right ui-btn-icon-notext"></a>
+            <a href="login.php" title="Sair" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-right">Sair</a>
             <div data-role="navbar">
                 <ul>
                     <li><a href="#index">Início</a></li>
@@ -168,7 +173,7 @@
                     while ($res = mysqli_fetch_array($query)) {
                     ?>
                     <li id="n<?=$res['id'];?>">
-                        <button style="float: right" class="apagaNoticia ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-delete ui-btn-icon-notext"></button>
+                        <button style="float: right" class="apagaNoticia ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-delete">Menu</button>
                         <h3>Título: <?= $res['titulo'];?></h3>
                         <p><audio controls src="audio/<?= $res['arquivoTitulo'] . '.mp3';?>"></p>
 							<p>Categoria: <?= $res['nome'];?></p>
@@ -219,9 +224,9 @@
 
     <div data-role="page" data-theme="a" id="usuarios">
         <div data-role="header">
-            <a href="#painelU" title="Menu" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="#painelU" title="Menu" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-left">Menu</a>
             <h1>Usuários</h1>
-            <a href="login.php" title="Sair" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-right ui-btn-icon-notext"></a>
+            <a href="login.php" title="Sair" class="ui-shadow-icon ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-right">Sair</a>
             <div data-role="navbar">
                 <ul>
                     <li><a href="#index">Início</a></li>
